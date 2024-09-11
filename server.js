@@ -1,49 +1,34 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+const path = require('path');
+
 const app = express();
+const port = process.env.PORT || 3000;
 
-app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Set EJS as the view engine
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-// MongoDB connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/glitzDB', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
-
-// Schema for custom orders, contacts, and wishlist
-const contactSchema = {
-    name: String,
-    email: String,
-    message: String
-};
-
-const customOrderSchema = {
-    customProduct: String
-};
-
-const wishlistSchema = {
-    items: [String]
-};
-
-const Contact = mongoose.model('Contact', contactSchema);
-const CustomOrder = mongoose.model('CustomOrder', customOrderSchema);
-const Wishlist = mongoose.model('Wishlist', wishlistSchema);
-
-// Routes
+// Define routes
 app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.get('/shop', (req, res) => {
-    res.render('shop');
+app.get('/contact', (req, res) => {
+    res.render('contact');
 });
 
 app.get('/custom', (req, res) => {
     res.render('custom');
 });
 
-app.get
+app.get('/faq', (req, res) => {
+    res.render('faq');
+});
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
