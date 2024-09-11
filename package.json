@@ -1,18 +1,19 @@
 {
   "name": "glitz-and-graphix",
   "version": "1.0.0",
-  "description": "Elegance in every bead",
+  "description": "Elegance in every bead,
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "ejs": "^3.1.8"
+    "ejs": "^3.1.8",
+    "dotenv": "^16.3.1"
   },
   "engines": {
-    "node": "14.x"
+    "node": "20.x"
   },
   "author": "Ashitha",
-  "license": "MIT"
+  "license": "ISC"
 }
