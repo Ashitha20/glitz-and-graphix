@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glitz & Graphix - Home</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%- include('partials/navbar') %>
+
+    <section class="hero">
+        <h1>New Collections & Special Offers</h1>
+        <p>Shop the latest accessories and get amazing deals!</p>
+        <a href="/shop" class="shop-now-btn">Shop Now</a>
+    </section>
+
+    <section class="new-collection">
+        <h2>Our Latest Collections</h2>
+        <div class="collection-grid">
+            <div class="collection-item">
+                <img src="/images/bracelets.jpg" alt="Bracelets">
+                <p>Bracelets</p>
+                <a href="/shop/bracelets">View Bracelets</a>
+                <button onclick="addToWishlist('Bracelets')">Add to Wishlist</button>
+            </div>
+            <div class="collection-item">
+                <img src="/images/phone-charms.jpg" alt="Phone Charms">
+                <p>Phone Charms</p>
+                <a href="/shop/charms">View Charms</a>
+                <button onclick="addToWishlist('Phone Charms')">Add to Wishlist</button>
+            </div>
+            <div class="collection-item">
+                <img src="/images/stickers.jpg" alt="Stickers">
+                <p>Stickers</p>
+                <a href="/shop/stickers">View Stickers</a>
+                <button onclick="addToWishlist('Stickers')">Add to Wishlist</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="wishlist">
+        <h2>Your Wishlist</h2>
+        <ul id="wishlist-items">
+            <!-- Wishlist items will appear here -->
+        </ul>
+    </section>
+
+    <%- include('partials/footer') %>
+    <script src="/scripts.js"></script>
+</body>
+</html>

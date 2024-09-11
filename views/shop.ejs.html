@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Glitz & Graphix</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%- include('partials/navbar') %>
+
+    <h2>Shop Our Products</h2>
+
+    <section class="shop-sections">
+        <div class="shop-item">
+            <img src="/images/bracelets.jpg" alt="Bracelets">
+            <a href="/shop/bracelets">Bracelets</a>
+        </div>
+        <div class="shop-item">
+            <img src="/images/phone-charms.jpg" alt="Phone Charms">
+            <a href="/shop/charms">Phone Charms</a>
+        </div>
+        <div class="shop-item">
+            <img src="/images/stickers.jpg" alt="Stickers">
+            <a href="/shop/stickers">Stickers</a>
+        </div>
+    </section>
+
+    <%- include('partials/footer') %>
+</body>
+</html>
