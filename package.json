@@ -1,6 +1,6 @@
 {
   "name": "glitz-and-graphix",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Elegance in every bead",
   "main": "server.js",
   "scripts": {
